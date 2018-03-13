@@ -1,0 +1,19 @@
+{
+  "name": "rest-server",
+  "version": "1.0.0",
+  "description": "Restful api for a ProgressiveWebApp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express-nedb-rest": "^1.2.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.1"
+  }
+}

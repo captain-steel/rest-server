@@ -1,0 +1,3 @@
+{"name":"Coffee","place":"Effeil Tours","location":{"address":"13 rue tigre blanc","city":"Paris","latitude":null,"longitude":null},"tastingRating":{},"type":"Espresso","rating":6,"notes":"Some comments are always useful","_id":"6RG8FiPF1PjnKm5f"}
+{"name":"Frappu","place":"Montparnasse","location":{"address":"13, rue de la victoire","city":"Paris","latitude":48.8947558,"longitude":2.1960232},"tastingRating":{"aroma":5,"sweetness":5},"type":"Frappuccino","rating":7,"_id":"RYMShqhITIklPIml"}
+{"name":"Cappu","place":"La défense","location":{"address":"25, rue jean charles","city":"Puteaux","latitude":48.894748,"longitude":2.1959835},"tastingRating":null,"type":"Cappuccino","rating":6,"notes":"Some notes are here !","_id":"TSLHCbxTX0dE3cXt"}
