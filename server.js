@@ -31,7 +31,7 @@ app.set(
 );
 
 // app.listen(app.get('port'), app.get('ipaddr'), function() {
-app.listen(app.get('port'), '0.0.0.0', function() {
+app.listen(app.get('port'), '120.130.0.0', function() {
   console.log(
     'Express server listening on ' + app.get('ipaddr') + ':' + app.get('port')
   );
