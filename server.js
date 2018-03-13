@@ -30,7 +30,8 @@ app.set(
     'localhost'
 );
 
-app.listen(app.get('port'), app.get('ipaddr'), function() {
+// app.listen(app.get('port'), app.get('ipaddr'), function() {
+app.listen(app.get('port'), '0.0.0.0', function() {
   console.log(
     'Express server listening on ' + app.get('ipaddr') + ':' + app.get('port')
   );
