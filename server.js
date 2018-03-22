@@ -32,5 +32,10 @@ app.set('ipaddr', 'localhost');
 
 app.listen(app.get('port'), app.get('ipaddr'), function() {
   // https://raw.githubusercontent.com/omnidan/node-emoji/master/lib/emoji.json
-  console.log(emoji.get('hourglass'), emoji.get('zap'), emoji.get('cat'), 'The server is running @ ' + app.get('ipaddr') + ':' + app.get('port'));
+  console.log(
+    emoji.get('hourglass'),
+    emoji.get('zap'),
+    emoji.get('cat'),
+    'The server is running @ ' + app.get('ipaddr') + ':' + app.get('port')
+  );
 });
