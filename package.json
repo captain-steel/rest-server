@@ -1,19 +1,25 @@
 {
   "name": "rest-server",
   "version": "1.0.0",
-  "description": "Restful api for a ProgressiveWebApp",
+  "description": "Restful express.js api server",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "web": "nodemon server.js"
   },
-  "author": "",
+  "author": "Wassim AZIRAR",
   "license": "ISC",
   "dependencies": {
+    "compression": "^1.7.2",
     "cors": "^2.8.4",
-    "express-nedb-rest": "^1.2.4"
+    "express-nedb-rest": "^1.2.4",
+    "helmet": "^3.12.0",
+    "morgan": "^1.9.0",
+    "node-emoji": "^1.8.1",
+    "response-time": "^2.3.2",
+    "serve-favicon": "^2.4.5"
   },
   "devDependencies": {
-    "nodemon": "^1.17.1"
+    "nodemon": "^1.17.2"
   }
 }
