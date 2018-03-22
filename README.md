@@ -1,11 +1,11 @@
 # rest-server
 Express.js Restful api server using nedb and somes middlewares 
 
-# installation
+### installation
 - npm install
 - yarn
 
-# run server
+### run server
 - npm run start => will run the server.js using node
 - npm run web => will run the server.js using [nodemon](https://nodemon.io/) (node with hot reloading)
 
