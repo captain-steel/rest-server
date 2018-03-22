@@ -2,6 +2,10 @@
   "name": "rest-server",
   "version": "1.0.0",
   "description": "Restful express.js api server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wassim-azirar/rest-server"
+  },
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
