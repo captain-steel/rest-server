@@ -21,7 +21,7 @@ restAPI.addDatastore('coffees', coffeeDataStore);
 
 app.use(compression());
 app.use(cors());
-app.use(favicon(__dirname + '/images/favicon.ico'));
+app.use(favicon(__dirname + '/favicon.ico'));
 app.use(helmet());
 app.use(morgan('common'));
 app.use(responseTime());
