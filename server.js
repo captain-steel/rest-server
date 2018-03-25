@@ -19,8 +19,8 @@ const coffeeDataStore = new nedb({
 });
 
 const options = {
-  cert: fs.readFileSync('/etc/letsencrypt/live/angular-pwa.westeurope.cloudapp.azure.com/fullchain.pem'),
-  key: fs.readFileSync('/etc/letsencrypt/live/angular-pwa.westeurope.cloudapp.azure.com/privkey.pem')
+  cert: fs.readFileSync('/path-to-https-keys/fullchain.pem'),
+  key: fs.readFileSync('/path-to-https-keys/privkey.pem')
 };
 
 const restAPI = rest();
