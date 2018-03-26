@@ -22,6 +22,7 @@
     "compression": "^1.7.2",
     "cors": "^2.8.4",
     "express-nedb-rest": "^1.2.4",
+    "express-rate-limit": "^2.11.0",
     "fs": "0.0.1-security",
     "helmet": "^3.12.0",
     "https": "^1.0.0",

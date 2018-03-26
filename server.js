@@ -8,6 +8,7 @@ const helmet       = require('helmet');
 const https        = require('https');
 const morgan       = require('morgan');
 const nedb         = require('nedb');
+const rateLimit    = require('express-rate-limit');
 const responseTime = require('response-time');
 const rest         = require('express-nedb-rest');
 
@@ -18,18 +19,27 @@ const coffeeDataStore = new nedb({
   autoload: true
 });
 
+const restAPI = rest();
+restAPI.addDatastore('coffees', coffeeDataStore);
+
 const options = {
   cert: fs.readFileSync('/path-to-https-keys/fullchain.pem'),
   key: fs.readFileSync('/path-to-https-keys/privkey.pem')
 };
 
-const restAPI = rest();
-restAPI.addDatastore('coffees', coffeeDataStore);
+var limiter = new RateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 50, // limit each IP to 100 requests per windowMs
+  delayMs: 0 // disable delaying - full speed until the max limit is reached
+});
+
+app.disable('x-powered-by');
 
 app.use(compression());
 app.use(cors());
 app.use(favicon(__dirname + '/favicon.ico'));
 app.use(helmet());
+app.use(limiter);
 app.use(morgan('common'));
 app.use(responseTime());
 app.use('/', restAPI);
@@ -38,7 +48,6 @@ app.set('port', process.env.PORT || 3000);
 app.set('ipaddr', '0.0.0.0');
 
 app.listen(app.get('port'), app.get('ipaddr'), function() {
-  // https://raw.githubusercontent.com/omnidan/node-emoji/master/lib/emoji.json
   console.log(
     emoji.get('hourglass'),
     emoji.get('zap'),
