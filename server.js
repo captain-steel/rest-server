@@ -22,10 +22,10 @@ const coffeeDataStore = new nedb({
 const restAPI = rest();
 restAPI.addDatastore('coffees', coffeeDataStore);
 
-const options = {
-  cert: fs.readFileSync('/path-to-https-keys/fullchain.pem'),
-  key: fs.readFileSync('/path-to-https-keys/privkey.pem')
-};
+// const options = {
+//   cert: fs.readFileSync('/path-to-https-keys/fullchain.pem'),
+//   key: fs.readFileSync('/path-to-https-keys/privkey.pem')
+// };
 
 var limiter = new rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
@@ -55,4 +55,4 @@ app.listen(app.get('port'), app.get('ipaddr'), function() {
     'The server is running @ ' + app.get('ipaddr') + ':' + app.get('port')
   );
 });
-https.createServer(options, app).listen(8443);
+//https.createServer(options, app).listen(8443);
